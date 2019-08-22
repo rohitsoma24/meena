@@ -1,0 +1,28 @@
+<html>
+<head>
+	<script>
+	var a,b,c;
+	function addNum()
+	{
+	a=prompt("Enter a number");
+	b=prompt("Enter a number");
+	c=parseInt(a)+parseInt(b);
+	document.write("The sum is "+c);
+	}
+	function subNum()
+	{
+	a=prompt("Enter the first number");
+	b=prompt("Enter the second number");
+	c=parseInt(a)-parseInt(b);
+	document.write("The difference is "+c);
+	}
+	</script>
+</head>
+
+
+
+<body>
+<input type="button" name="submit" value="Click here to add numbers" onClick="addNum()"/>
+<input type="button" name="submit" value="Click here to subtract numbers" onClick="subNum()"/>
+</body>	
+</html>

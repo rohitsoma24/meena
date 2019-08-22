@@ -1,0 +1,72 @@
+<html>
+<script>
+fucntion fun()
+{
+var a=f1.t1.value;
+var b=f1.t2.value;
+var c=f1.t3.value;
+var d=f1.t4.value;
+if(a=="")
+{
+alert("Roll no is empty");
+f1.t1.focus();
+}
+else  if(isNaN(a))
+{
+alert("Please enter a number");
+f1.t1.focus;
+}
+else if(a=="0")
+{
+alert("The number is zero");
+f1.t1.focus;
+}
+else if(b=="")
+{
+alert("Please enter the name");
+f1.t2.focus();
+}
+else if(c=="")
+{
+alert("Please enter the address");
+f1.t3.focus();
+}
+else if(d=="")
+{
+alert("Please enter the number");
+f1.t4.focus();
+}
+else if(isNaN(d))
+{
+alert("Enter the number");
+f1.t4.focus();
+}
+else if(d.length!=10)
+{
+alert("Enter 10 digits only");
+f1.t4.focus();
+}
+else
+{
+alert("Data submitted successfully");
+f1.submit();
+}
+}
+
+
+</script>
+<body bgcolor=cyan>
+<form name="f1" action=second.jsp>
+<h2 align=center><font color="red">JAVA SCRIPT</font></h2>
+<hr color=blue>
+<table>
+<tr><td>Roll no<td><input type="number" name=t1 size=20></tr>
+<tr><td>Name<td><input type="text" name=t2 size=20></tr>
+<tr><td>Address<td><input type="text" name=t3 size=20></tr>
+<tr><td>Phone no<td><input type="number" name=t4 size=20></tr>
+<tr><td><input type=button value=submit onClick='fun()'/></tr>
+</table>
+</form>
+</body>
+</html>
+
