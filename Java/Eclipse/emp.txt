@@ -1,0 +1,61 @@
+import java.util.*;
+
+
+ class Emp {
+
+	int empno;
+	String name,location;
+	
+	void input()
+	{
+		Scanner S=new Scanner(System.in);
+		System.out.println("Enter empno,name and location");
+		empno=S.nextInt();
+		name=S.next();
+		location=S.next();
+		
+		
+	}
+	void output()
+	{
+		System.out.println("The empno is "+empno);
+		System.out.println("The name is "+name);
+		System.out.println("The location is "+location);
+	}
+	
+
+}	
+	public class Bank extends Emp
+	{
+		int accno,salary;
+		String bankname;
+		void input()
+		{
+			super.input();
+			Scanner S=new Scanner(System.in);
+			System.out.println("Enter Acc number, Salary and bank name");
+			accno=S.nextInt();
+			salary=S.nextInt();
+			bankname=S.next();
+			
+		}
+		
+		void output()
+		{
+			super.output();
+			System.out.println("The acc num is "+accno);
+			System.out.println("The bank name is "+bankname);
+			System.out.println("The salary is "+salary);
+		}
+		
+		public static void main(String args[])
+		{
+		
+			Bank obj=new Bank();
+			obj.input();
+			obj.output();
+			
+			
+		}
+	}
+	
