@@ -138,3 +138,120 @@ class Student
 		ob.display();
 		}
 }
+-------------------------------------------------
+inheritance
+------------------
+It is the reusablity of code.
+java support single inheritance.
+we use the keyword super to access the parent class variables and methods.we use key word extends to inherite the parent class into the child class .
+we create object for the child class.
+-------------------------------------------------------------------
+example:-
+package Mphasis;
+import java.util.*;
+class Student
+{
+	int rollno;
+	String name,address;
+	void input()
+	{
+		Scanner ob=new Scanner(System.in);
+		System.out.println("enter rollno,name and address");
+		rollno=ob.nextInt();name=ob.next();address=ob.next();
+	}
+	void display()
+	{
+	System.out.println("rollno :"+rollno+"name :"+name+" address :"+address);
+	}}
+	class First extends Student
+	{
+		int m1,m2,m3,tot,avg;
+		void input()
+		{
+			super.input();
+			Scanner ob=new Scanner(System.in);
+			System.out.println("enter 3 subjects marks");
+			m1=ob.nextInt();m2=ob.nextInt();m3=ob.nextInt();
+			tot=m1+m2+m3;
+			avg=tot/3;
+		}
+		void display()
+		{
+			super.display();
+			System.out.println("the total is "+tot);
+			System.out.println("the average is "+avg);
+		}
+		public static void main(String[] args) 
+		{
+		First ob=new First();
+		ob.input();
+		ob.display();
+		}
+}
+-------------------------------------------------------------
+abstract class :-
+1)it is incomplete class.we use the keyword abstract.
+2)it contain concret methods as well as abstract method.
+3)we cannot instanciate an abstract class.
+4)we have to override the abstract methods in the child class and create object for the child class.
+5)it is used to define the objectives of the project.
+---------------------------------------------------------------------------------------------
+package Mphasis;
+ abstract class  Third
+{abstract void create();
+abstract void display();
+abstract void delete();
+void list()
+{	System.out.println("this will display list of employee");}}
+
+ public class Second extends Third
+ {	void create() {System.out.println("create");	}
+	void display() {System.out.println("display");	}
+	void delete() {System.out.println("delete");	}
+	 public static void main(String[] args) 
+	 {		Second obj=new Second();
+		obj.create();obj.display();obj.delete();obj.list();	} }
+
+
+-------------------------------------------------------
+Interface
+----------------
+1)It contain only abstract methods.we donot use the keyword abstract.
+2)we have to implement it in the child class and override the abstract methods.
+3)we cannot instanciate a interface.
+4)the variables declared in the interface is final and static.
+5)the override methods should be public.
+6)we can extend a interface
+-------------------------------------------------------------------------------------------  
+
+package Mphasis;
+ interface a
+ {
+	 int a=10;//final and static
+	 void create();
+ }
+ interface b extends a
+ {
+	 void display();
+ }
+ interface c
+ {
+	 void list();
+ }
+  class Second implements b,c// multiple inheritance
+ {
+	public void create() {
+		System.out.println("create");	}
+
+	public void list() {
+	System.out.println("list");	}
+
+	public void display() {
+		System.out.println("display");	}
+	 public static void main(String[] args) {
+		Second ob=new Second();
+		ob.create();ob.display();ob.list();
+		System.out.println("the value of a is "+a);
+	}
+ }
+-------------------------------------------------------
