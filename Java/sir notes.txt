@@ -255,3 +255,90 @@ package Mphasis;
 	}
  }
 -------------------------------------------------------
+package org.mphasis;
+public class inheritanceex 
+{
+int empno;
+String name,address;
+public inheritanceex(int empno, String name, String address)
+{
+	this.empno = empno;
+	this.name = name;
+	this.address = address;
+}
+void display()
+{
+	System.out.println("empno :"+empno+" name :"+name+" address :"+address);
+}}
+---------------------------------------------------------------
+package org.mphasis;
+public class Childex extends inheritanceex 
+{
+	float salary;
+	String design;
+	public Childex(int empno, String name, String address,float salary,String design)
+	{
+		super(empno, name, address);//super class constructor will execute first
+		this.salary=salary;
+		this.design=design;
+			}
+	void display()
+	{
+		super.display();
+		System.out.println("salary :"+salary+" design :"+design);
+	}
+	public static void main(String[] args)
+	{
+	Childex obj=new Childex(101,"sandip","Pune",4500.53f,"Software eng");	
+	obj.display();
+	}}
+-------------------------------------------------------------
+package Mphasis;
+public class Encapsulationex 
+{
+private int empno;
+private String name,address;
+private float salary;
+public int getEmpno() {
+	return empno;
+}
+public void setEmpno(int empno) {
+	this.empno = empno;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public String getAddress() {
+	return address;
+}
+public void setAddress(String address) {
+	this.address = address;
+}
+public float getSalary() {
+	return salary;
+}
+public void setSalary(float salary) {
+	this.salary = salary;
+}
+
+
+}
+---------------------------------
+package Mphasis;
+public class Test 
+{
+	public static void main(String[] args) 
+	{
+		Encapsulationex obj=new Encapsulationex ();
+		obj.setEmpno(101);
+		obj.setName("sandip");
+		obj.setAddress("Pune");
+		obj.setSalary(4500.50f);
+System.out.println("empno :"+obj.getEmpno()+" name :"+obj.getName()+" address :"+obj.getAddress());
+System.out.println("salary :"+obj.getSalary());	
+	}}
+---------------------------
+
