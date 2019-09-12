@@ -1,0 +1,30 @@
+
+FUNCTIONS:
+
+create or replace function adds(i number,j number) return number is
+begin
+return i+j;
+end;
+
+select adds(3,3) from dual;
+
+---------------------------------------------------------------------------
+
+
+create or replace function empdesig(salary number) return varchar2 is
+begin
+if(salary<=10000) then
+return 'Clerk';
+elsif(salary<=20000) then
+return 'Officer';
+elsif(salary<=30000) then
+return 'Manager';
+else
+return 'President';
+end if;
+end;
+
+select empdesig(30000) from dual;
+
+
+--------------------------------------------------------------------------

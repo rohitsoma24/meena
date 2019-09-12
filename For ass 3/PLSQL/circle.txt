@@ -1,0 +1,16 @@
+create table circle(radius number,area number);
+
+
+declare 
+pi constant number(4,2):=3.14;
+radius number;
+area number;
+begin
+for radius in 5..10 loop
+area:=pi*power(radius,2);
+insert into circle values(radius,area);
+end loop;
+end;
+
+
+select * from circle;

@@ -1,0 +1,11 @@
+PROCEDURE
+
+
+create or replace procedure del_12manager is
+begin
+insert into employee(empid,empname,empage,salary,empaddress) values
+(&empid,&empname,&empage,&salary,&empaddress);
+delete from employee where empname='yasg';
+commit;
+end;
+
