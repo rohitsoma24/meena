@@ -1,0 +1,92 @@
+﻿import java.io.*;
+import java.sql.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+
+
+import javax.servlet.*;
+@WebServlet("/Calculator_1")
+public class Calculator_1 extends GenericServlet{
+
+	@Override
+	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+		PrintWriter pw=res.getWriter();
+		res.setContentType("text/html");
+		String a=req.getParameter("t1");
+		double num1=Double.parseDouble(a);
+		String b=req.getParameter("t2");
+		double num2=Double.parseDouble(b);
+		String c=req.getParameter("t3");
+		
+		
+	
+
+	try {
+		if(c.equals("Add"))
+		{
+		double ans=num1+num2;
+		pw.println("The answer is "+ans);
+		}
+		if(c.equals("Subtract"))
+		{
+			double ans=num1-num2;
+			pw.println("The answer is "+ans);
+			
+		}
+
+		if(c.equals("Multiply"))
+		{
+			double ans=num1*num2;
+			pw.println("The answer is "+ans);
+			
+		}
+		if(c.equals("Divide"))
+		{
+			double ans=num1/num2;
+			pw.println("The answer is "+ans);
+			
+		}
+
+	}
+	catch (Exception e)
+	{
+		e.printStackTrace();
+	}
+	
+}
+}
+
+
+---------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body bgcolor=grey>
+<h1><center> CALCULATOR</center></h1>
+<form action="Calculator_1" action=get>
+<table>
+<tr><td>Enter a number<input type=number name=t1 size=10></td></tr>
+<tr><td>Enter a number<input type=number name=t2 size=10></td></tr>
+<tr><td><td><input type=submit value=Add name=t3>
+<td><input type=submit value=Subtract name=t3>
+<td><input type=submit value=Multiply name=t3>
+<td><input type=submit value=Divide name=t3>
+</td></tr>
+
+
+
+
+</table>
+</form>
+
+</body>
+
+</html>

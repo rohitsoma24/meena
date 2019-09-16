@@ -1,0 +1,114 @@
+﻿package Mphasis;
+
+import java.io.*;
+import java.sql.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+
+
+@WebServlet("/Registration")
+public class Registration extends GenericServlet {
+		public void init()
+		{
+			System.out.println("init");
+		}
+		public void service(ServletRequest req,ServletResponse res) throws IOException
+		{
+			PrintWriter pw=res.getWriter();
+			res.setContentType("text/html");
+			String a=req.getParameter("t1");
+			String b=req.getParameter("t2");
+			String c=req.getParameter("t3");
+			String d=req.getParameter("t4");
+			String e=req.getParameter("b1");
+			pw.println("The name is "+a);
+			pw.println("The address is "+b);
+			pw.println("The number is "+c);
+			pw.println("The email is "+d);
+			
+			try
+			{
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+				Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","123456789");
+				if(e.equals("Insert"))
+				{
+					PreparedStatement st=con.prepareStatement("Insert into Mphasisstud values(?,?,?,?)");
+					st.setString(1, a);
+					st.setString(2, b);
+					st.setString(3, c);
+					st.setString(4, d);
+					st.execute();
+					pw.println("Row inserted");
+					
+				}
+				if(e.equals("Updated"))
+				{
+					PreparedStatement st=con.prepareStatement("Update into Mphasisstud set address=? mobile=? email=? where name=?)");
+					st.setString(1, b);
+					st.setString(2, c);
+					st.setString(3, d);
+					st.setString(4, a);
+					st.execute();
+					pw.println("Row inserted");
+					
+				}
+				if(e.equals("Delete"))
+				{
+					PreparedStatement st=con.prepareStatement("Delete from Mphasisstud where name=?");
+					st.setString(1, a);
+					st.execute();
+					pw.println("Row Deleted");
+					
+				}
+				if(e.equals("Select"))
+				{
+					PreparedStatement st=con.prepareStatement("Insert into Mphasisstud values(?,?,?,?)");
+					st.setString(1, a);
+					st.setString(2, b);
+					st.setString(3, c);
+					st.setString(4, d);
+					st.execute();
+					pw.println("Row inserted");
+					
+				}
+			}	
+			catch(Exception ae)
+			{
+				ae.printStackTrace();
+			
+			}
+			}
+		public void destroy()
+		{
+			System.out.println("Destroy");
+		}
+		
+}
+
+
+
+-----------------------------------------------------------------------------
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body bgcolor=cyan>
+<h1><center>Mphasis Student registration Page</center></h1>
+<form action=Registration action=get>
+<table>
+<tr><td>Enter your name<td><input type=text name=t1 size=20 required></td><tr>
+<tr><td>Enter your address<td><input type=text name=t2 size=20 required></td><tr>
+<tr><td>Enter your number<td><input type=number name=t3 size=10 required></td><tr>
+<tr><td>Enter your email<td><input type=email name=t4 size=20 required></td><tr>
+<tr><td><td><input type=submit value=Insert name=b1>
+<td><td><input type=submit value=Update name=b1>
+<td><td><input type=submit value=Delete name=b1>
+<td><td><input type=submit value=Select name=b1></tr>
+</table>
+</form>
+</body>
+</html>
+
+
