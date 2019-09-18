@@ -123,7 +123,7 @@ ans:-primary
 ans:- Limits the row data
 
 47)isSearchable(int column) returns?
-ans:-
+ans:-boolean values
 
 48)which interface provides methods  for processing in jdbc
 ans:-java.sql.statement, java.sql.Preparedstatement
