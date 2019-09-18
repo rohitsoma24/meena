@@ -168,7 +168,7 @@ ans :- type 3
 ans:- real
 
 29)isSearchable(int column) returns -----------------
-ans :- binary values
+ans :- boolean values
 
 30)ResultSet object can be moved in forward direction and can be updatable 
 ans :- false
