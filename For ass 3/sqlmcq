@@ -79,6 +79,7 @@ ans:- PreparedStatement
 31)what is class/interface that is used to connect URL string connection?
 
 32)Default concurrency of resultset?
+Ans CONCUR_READ_ONLY
 
 33)Full outer join is used for ?
 ans:-to display all values
