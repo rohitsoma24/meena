@@ -1,0 +1,27 @@
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+  <context-param>
+    <param-name>n1</param-name>
+    <param-value>10</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>n2</param-name>
+    <param-value>20</param-value>
+  </context-param>
+
+  <servlet>
+    <servlet-name>OnContext</servlet-name>
+    <servlet-class>OnContext</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>OnContext</servlet-name>
+    <url-pattern>/OnContext/*</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>first.html</welcome-file>
+  </welcome-file-list>
+
+  </web-app>
