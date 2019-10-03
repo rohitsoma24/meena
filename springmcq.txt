@@ -131,7 +131,7 @@ c. ResultSetMapper
 d. None of the above
 
 
-Ans : b (confirm)
+Ans : d
 
 
 
