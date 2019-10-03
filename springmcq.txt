@@ -34,6 +34,8 @@ b. AdvicePoint
 c. CrossPOint
 d. All of the above
 
+Ans : JoinPoint
+
 
 5. Which of the following is actual representation of the spring IOC container?
 
@@ -42,10 +44,10 @@ b. HttpSession
 c. BeanFactory
 d. WebApplicationContext
 
-Ans : c (confirm)
+Ans : c 
 
 
-6. Select Defauylt Handler mapping used by Spring MVC
+6. Select Default Handler mapping used by Spring MVC
 
 a. ControllerClassNameHandlerMapping
 b. BeanNameUrlHandlerMapping
@@ -73,7 +75,7 @@ b. ServletDispatcher
 c. Bean
 d. None of the above
 
-Ans : b (confirm)
+Ans : b 
 
 
 9. How many modules/layers are there in Spring?
@@ -83,7 +85,7 @@ b. 6
 c. 7
 d. 8
 
-Ans : 5 (confirm)
+Ans : 5 
 
 
 10. How to auto-inject into a field a bean by its name? Select one or more response.
@@ -106,7 +108,7 @@ c. template
 d. None of the above
 
 
-Ans : c (confirm)
+Ans : c 
 
 
 
@@ -120,7 +122,7 @@ d. The Spring DispatcherServlet has a couple of special beans it uses in order t
 e. All of the above
 
 
-Ans : e (confirm)
+Ans : e 
 
 
 13. Which class is used to map a database row to a java object in spring?
@@ -143,7 +145,7 @@ b. byName, byMethod, constructor and autodetect
 c. byName,byType,constructor and autocorrect
 d. byName, byType, constructor and autodetect
 
-Ans : d (confirm)
+Ans : d 
 
 
 15. What is/are typically cases(s) where you usually need to manually instantiate anApplicationContext?
@@ -171,7 +173,7 @@ c. Both A and B
 d. No error.
 
 
-Ans : B
+Ans : b
 
 
 17. What are the responsibilities of xmlBeanfactory included?
@@ -183,7 +185,7 @@ c. The xmlBeanFactory takes the xmlconfiguration metadata and uses it to create 
 d. None of the above
 
 
-Ans: c 
+Ans: c or all of the above 
 
 
 18. Spring's transaction support is not tied to _________
@@ -219,7 +221,7 @@ c. CrossPoint
 d. All of the above
 
 
-Ans : b
+Ans : a
 
 
 21. _________ is the implementation of Aspects.
