@@ -5,7 +5,7 @@ b. RowSetMApper
 c. ResultSetMapper
 d. None of the above
 
-Ans: 
+Ans: d
 
 
 2. JdbcTemplate class provided the following 3 type of methods to execute SQL operations on database
